@@ -1,0 +1,127 @@
+{% extends 'base.html' %}
+{% load static %}
+<!--<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<h1>Our Products</h1>
+	{% for project in project_list %}
+
+	   <h2><a href="{% url 'projects:project_detail' project.slug %}">{{project}}</a></h2>
+	 {% endfor %}  	
+	 <img src="{{project.image.url}}" class="img-responsive
+	
+</body>
+</html>
+-->
+
+
+{% block body %} 
+
+<!-- Portfolio (Right Sidebar) Start -->
+<div class="col-md-9">
+	<div class="col-md-12 page-body">
+		<div class="row">
+
+
+			<div class="sub-title">
+				<h2>My Portfolio</h2>
+				<a href="contact.html"><i class="icon-envelope"></i></a>
+			</div>
+
+
+			<div class="col-md-12 content-page">
+				<div class="col-md-12 blog-post">
+
+
+					<!-- Intro Start -->
+					<div class="post-title margin-bottom-30">
+						<h1>Let's take a look on <span class="main-color">My Work</span></h1>
+					</div>
+					<!-- Intro End -->
+
+
+
+                  
+					<!-- Portfolio Start -->
+					<div> 
+						<!-- Portfolio Detail Start -->
+
+                        {% for project in project_list %}
+
+						<div class="row portfolio">
+							
+
+
+							<div class="col-sm-12 custom-pad-8">
+								<div class="table-responsive">
+									<table class="table table-bordered">
+										<tbody>
+											<tr>
+												<td><img src="{{project.image.url}}"  class="img-responsive" alt=""></td>
+												<td style="text-align:center;"><h1>{{project.name}}</h1></td>
+												
+											</tr>
+
+
+											<tr>
+												<td><b>Category</b></td>
+												<td>{{project.category}}</td>
+											</tr>
+
+											<tr>
+												<td><b>About Project</b></td>
+												<td>{{project.description}}</td>
+											</tr>
+
+											<tr>
+												<td><b>Technoloy</b></td>
+												<td>{{project.technology}}</td>
+											</tr>
+
+											<tr>
+												<td><b>Url</b></td>
+												<td><a href="{% url 'projects:project_detail' project.slug %}" title="More">Find More</a></td>
+											</tr>
+
+											
+										</tbody>
+									</table>
+
+								</div>
+							</div>
+
+
+						</div>
+						<!-- Portfolio Detail End -->
+
+						{% endfor %}  
+
+
+					</div>
+					<!-- Portfolio End -->
+					
+
+				</div>  
+
+				<div class="col-md-12 text-center">
+					<a href="javascript:void(0)" id="load-more-portfolio" class="load-more-button">Load</a>
+					<div id="portfolio-end-message"></div>
+				</div>
+
+			</div>
+
+		</div>
+
+
+
+
+
+	</div>
+
+
+
+{% endblock %}                

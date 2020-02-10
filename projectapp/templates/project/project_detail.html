@@ -1,0 +1,79 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block body %} 
+<!-- Blog Post (Right Sidebar) Start -->
+<div class="col-md-9">
+	<div class="col-md-12 page-body">
+		<div class="row">
+
+
+			<div class="sub-title">
+				<a href="index.html" title="Go to Home Page"><h2>Back Home</h2></a>
+				<a href="#comment" class="smoth-scroll"><i class="icon-bubbles"></i></a>
+			</div>
+
+
+			<div class="col-md-12 content-page">
+				<div class="col-md-12 blog-post margin-bottom-10">
+
+
+					<!-- Post Headline Start -->
+					<div class="post-title">
+						<h1>{{project_detail.name}}</h1> 
+					</div>
+					<!-- Post Headline End -->
+
+
+					<!-- Post Detail Start -->
+					<div class="post-info">
+						<span>
+							{{project_detail.created|date:"D, d F, Y"}} By: <a href="#" target="_blank">{{project_detail.owner|capfirst}}
+							</a>
+						</span>
+					</div>
+					
+					<p>{{project_detail.description}}</p>
+
+					<div class="video-box">
+						<div class=" portfolio margin-top-20 margin-bottom-10">
+							<div class="image-carousel ">
+
+								{% for image in project_images %}
+								<img src="{{image.image.url}}" class="img-responsive" alt="">
+
+								{% endfor %}
+
+							</div>
+						</div>
+					</div>
+
+
+					<!-- Post Detail End -->
+
+				</div>    
+			</div>
+
+		</div>
+
+        {% if project_detail.url %}
+		<!-- Subscribe Form Start -->
+		<div class="col-md-8 col-md-offset-2">
+
+			<div class="subscribe-form margin-top-20 margin-bottom-20">
+				<center>
+					<a href="{{project_detail.url}}" class="submit btn btn-primary" role="button" aria-pressed="true">PREDICTION PAGE</a>
+				</center>
+
+				<p align="center">Go to the prediction page</p>
+
+
+			</div>
+
+		</div>
+		<!-- Subscribe Form End -->
+		{% endif %}
+
+	</div>
+
+	{% endblock %}                           

@@ -1,0 +1,82 @@
+﻿{% extends 'base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block body %} 
+<!-- Contact (Right Sidebar) Start -->
+<div class="col-md-9">
+  <div class="col-md-12 page-body">
+   <div class="row">
+
+
+    <div class="sub-title">
+     <h2>Dog | Cat Photo Prediction</h2>
+     <a href="index.html"><i class="icon-home"></i></a>
+   </div>
+
+
+   <div class="col-md-12 content-page">
+    <div class="col-md-12 blog-post">
+
+
+
+      <!-- Intro Start -->
+      <div class="post-title margin-bottom-10">
+       <h1>Dog or Cat <span class="main-color"> Prediction Form </span></h1>
+     </div>
+
+     <p>Please fill the required information to proceed</p>
+     <!-- Intro End -->
+
+     <!-- Contact Me Start -->
+
+
+     <div class="row margin-top-30">
+      <div class="col-md-12">   
+
+        <div class="row">
+         <form method="POST" enctype="multipart/form-data">
+
+          {% csrf_token %}
+          {#{{form_data.as_p}}#}
+
+           {{ form_data|crispy }}
+
+
+          <div class="text-center margin-top-50" >      
+            <button type="submit" class="load-more-button">Send</button>
+          </div>
+
+        </form>
+      </div>
+    </div>
+  </div>
+  <!-- Contact Me End -->
+
+
+</div>
+</div>
+</div>
+
+
+{% if messages %}
+    <!-- Subscribe Form Start -->
+    <div class="col-md-8 col-md-offset-2">
+     
+      {% for message in messages %}
+      <div class="subscribe-form margin-top-20 margin-bottom-20">
+        <center {% if message.tags %} class=" {{ message.tags }} " {% endif %} >
+          <a href="{{project_detail.url}}" class="submit btn btn-primary" role="button" aria-pressed="true">{{ message }}</a>
+        </center>
+      {% endfor %}
+
+      </div>
+
+    </div>
+    <!-- Subscribe Form End -->
+{% endif %}
+
+</div>
+
+
+{% endblock %}  

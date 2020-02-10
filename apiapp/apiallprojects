@@ -1,0 +1,59 @@
+HTTP 200 OK
+Allow: GET, HEAD, OPTIONS
+Content-Type: application/json
+Vary: Accept
+
+[
+    {
+        "id": 1,
+        "name": "Cassava Crop Decease Detection",
+        "technology": "Python | Tensorflow | Django Framework | Html, CSS, JavaScript",
+        "description": "Cassava Crop Decease Detection using Convolution Neural Network Deep Learning",
+        "price": "1000.00000",
+        "image": "http://127.0.0.1:8000/media/main_project/Right-aligned-2_Cassava-660.jpg",
+        "url": "http://127.0.0.1:8000/cassavas/",
+        "created": "2020-01-13T15:22:03Z",
+        "slug": "cassava-crop-decease-detection",
+        "owner": 1,
+        "category": 1
+    },
+    {
+        "id": 2,
+        "name": "Loan Prediction with Artificial Neural Network",
+        "technology": "Python | Tensorflow | Django Framework | Html, CSS, JavaScript",
+        "description": "Loan Prediction application is  using Artificial Neural Network to predict if the employee will meet the criteria for earning the loan according to the factors parameters set by the company",
+        "price": "2000.00000",
+        "image": "http://127.0.0.1:8000/media/main_project/shutterstock_297225377.jpg",
+        "url": "http://127.0.0.1:8000/loans/",
+        "created": "2020-01-13T15:36:59Z",
+        "slug": "loan-prediction",
+        "owner": 1,
+        "category": 1
+    },
+    {
+        "id": 3,
+        "name": "Photo Manipulation And Creativity",
+        "technology": "Adobe Photoshop CC",
+        "description": "Photo Manipulation And Creativity is the blending of different photos seamlessly to create the effect that to look almost real",
+        "price": "3000.00000",
+        "image": "http://127.0.0.1:8000/media/main_project/Graphic-_Design.jpg",
+        "url": null,
+        "created": "2020-01-14T07:24:56Z",
+        "slug": "photo-manipulation-and-creativity",
+        "owner": 1,
+        "category": 2
+    },
+    {
+        "id": 4,
+        "name": "Dog or Cat Photo Prediction",
+        "technology": "Python | Tensorflow | Django Framework | Html, CSS, JavaScript",
+        "description": "Dog or Cat Photo Prediction is an application that  predict the result of the uploaded picture by user if it is the picture of a DOG or CAT",
+        "price": "233.00000",
+        "image": "http://127.0.0.1:8000/media/main_project/cat1.jpeg",
+        "url": "http://127.0.0.1:8000/dogcats/",
+        "created": "2020-01-15T15:57:45Z",
+        "slug": "dog-or-cat-photo-prediction",
+        "owner": 1,
+        "category": 1
+    }
+]
